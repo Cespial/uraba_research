@@ -1,0 +1,779 @@
+{
+  "T1_T2": {
+    "years": "2013-2016",
+    "years_between": 3,
+    "transitions": {
+      "1->1": {
+        "from": "Dense forest",
+        "to": "Dense forest",
+        "area_ha": 506409.8
+      },
+      "1->2": {
+        "from": "Dense forest",
+        "to": "Secondary forest",
+        "area_ha": 118987.2
+      },
+      "1->3": {
+        "from": "Dense forest",
+        "to": "Pastures",
+        "area_ha": 91363.1
+      },
+      "1->5": {
+        "from": "Dense forest",
+        "to": "Water",
+        "area_ha": 45.3
+      },
+      "1->6": {
+        "from": "Dense forest",
+        "to": "Urban",
+        "area_ha": 17226.5
+      },
+      "1->8": {
+        "from": "Dense forest",
+        "to": "Mangroves",
+        "area_ha": 6470.9
+      },
+      "2->1": {
+        "from": "Secondary forest",
+        "to": "Dense forest",
+        "area_ha": 58510.4
+      },
+      "2->2": {
+        "from": "Secondary forest",
+        "to": "Secondary forest",
+        "area_ha": 297526.2
+      },
+      "2->3": {
+        "from": "Secondary forest",
+        "to": "Pastures",
+        "area_ha": 77631.4
+      },
+      "2->5": {
+        "from": "Secondary forest",
+        "to": "Water",
+        "area_ha": 23.6
+      },
+      "2->6": {
+        "from": "Secondary forest",
+        "to": "Urban",
+        "area_ha": 76786.0
+      },
+      "2->8": {
+        "from": "Secondary forest",
+        "to": "Mangroves",
+        "area_ha": 82.7
+      },
+      "3->1": {
+        "from": "Pastures",
+        "to": "Dense forest",
+        "area_ha": 129363.6
+      },
+      "3->2": {
+        "from": "Pastures",
+        "to": "Secondary forest",
+        "area_ha": 212760.0
+      },
+      "3->3": {
+        "from": "Pastures",
+        "to": "Pastures",
+        "area_ha": 613104.2
+      },
+      "3->5": {
+        "from": "Pastures",
+        "to": "Water",
+        "area_ha": 238.2
+      },
+      "3->6": {
+        "from": "Pastures",
+        "to": "Urban",
+        "area_ha": 46716.5
+      },
+      "3->8": {
+        "from": "Pastures",
+        "to": "Mangroves",
+        "area_ha": 21164.3
+      },
+      "5->1": {
+        "from": "Water",
+        "to": "Dense forest",
+        "area_ha": 244.0
+      },
+      "5->2": {
+        "from": "Water",
+        "to": "Secondary forest",
+        "area_ha": 45.2
+      },
+      "5->3": {
+        "from": "Water",
+        "to": "Pastures",
+        "area_ha": 639.2
+      },
+      "5->5": {
+        "from": "Water",
+        "to": "Water",
+        "area_ha": 462304.3
+      },
+      "5->6": {
+        "from": "Water",
+        "to": "Urban",
+        "area_ha": 1024.9
+      },
+      "5->8": {
+        "from": "Water",
+        "to": "Mangroves",
+        "area_ha": 3023.4
+      },
+      "6->1": {
+        "from": "Urban",
+        "to": "Dense forest",
+        "area_ha": 10686.2
+      },
+      "6->2": {
+        "from": "Urban",
+        "to": "Secondary forest",
+        "area_ha": 30305.6
+      },
+      "6->3": {
+        "from": "Urban",
+        "to": "Pastures",
+        "area_ha": 121925.5
+      },
+      "6->5": {
+        "from": "Urban",
+        "to": "Water",
+        "area_ha": 72.7
+      },
+      "6->6": {
+        "from": "Urban",
+        "to": "Urban",
+        "area_ha": 219711.0
+      },
+      "6->8": {
+        "from": "Urban",
+        "to": "Mangroves",
+        "area_ha": 2325.3
+      },
+      "8->1": {
+        "from": "Mangroves",
+        "to": "Dense forest",
+        "area_ha": 11112.8
+      },
+      "8->2": {
+        "from": "Mangroves",
+        "to": "Secondary forest",
+        "area_ha": 135.9
+      },
+      "8->3": {
+        "from": "Mangroves",
+        "to": "Pastures",
+        "area_ha": 12541.7
+      },
+      "8->5": {
+        "from": "Mangroves",
+        "to": "Water",
+        "area_ha": 471.2
+      },
+      "8->6": {
+        "from": "Mangroves",
+        "to": "Urban",
+        "area_ha": 1762.6
+      },
+      "8->8": {
+        "from": "Mangroves",
+        "to": "Mangroves",
+        "area_ha": 52745.5
+      }
+    },
+    "change_rates": {
+      "1": {
+        "name": "Dense forest",
+        "area_t1_ha": 740502.8,
+        "area_t2_ha": 716326.8,
+        "net_change_ha": -24176.0,
+        "pct_change": -3.26,
+        "annual_rate_pct": -1.106
+      },
+      "2": {
+        "name": "Secondary forest",
+        "area_t1_ha": 510560.3,
+        "area_t2_ha": 659760.1,
+        "net_change_ha": 149199.8,
+        "pct_change": 29.22,
+        "annual_rate_pct": 8.546
+      },
+      "3": {
+        "name": "Pastures",
+        "area_t1_ha": 1023346.8,
+        "area_t2_ha": 917205.1,
+        "net_change_ha": -106141.7,
+        "pct_change": -10.37,
+        "annual_rate_pct": -3.65
+      },
+      "4": {
+        "name": "Crops",
+        "area_t1_ha": 0,
+        "area_t2_ha": 0,
+        "net_change_ha": 0,
+        "pct_change": 0,
+        "annual_rate_pct": 0
+      },
+      "5": {
+        "name": "Water",
+        "area_t1_ha": 467281.0,
+        "area_t2_ha": 463155.3,
+        "net_change_ha": -4125.7,
+        "pct_change": -0.88,
+        "annual_rate_pct": -0.296
+      },
+      "6": {
+        "name": "Urban",
+        "area_t1_ha": 385026.3,
+        "area_t2_ha": 363227.5,
+        "net_change_ha": -21798.8,
+        "pct_change": -5.66,
+        "annual_rate_pct": -1.943
+      },
+      "7": {
+        "name": "Bare soil",
+        "area_t1_ha": 0,
+        "area_t2_ha": 0,
+        "net_change_ha": 0,
+        "pct_change": 0,
+        "annual_rate_pct": 0
+      },
+      "8": {
+        "name": "Mangroves",
+        "area_t1_ha": 78769.7,
+        "area_t2_ha": 85812.1,
+        "net_change_ha": 7042.4,
+        "pct_change": 8.94,
+        "annual_rate_pct": 2.854
+      }
+    }
+  },
+  "T2_T3": {
+    "years": "2016-2020",
+    "years_between": 4,
+    "transitions": {
+      "1->1": {
+        "from": "Dense forest",
+        "to": "Dense forest",
+        "area_ha": 384363.8
+      },
+      "1->2": {
+        "from": "Dense forest",
+        "to": "Secondary forest",
+        "area_ha": 124709.2
+      },
+      "1->3": {
+        "from": "Dense forest",
+        "to": "Pastures",
+        "area_ha": 174885.5
+      },
+      "1->5": {
+        "from": "Dense forest",
+        "to": "Water",
+        "area_ha": 267.5
+      },
+      "1->6": {
+        "from": "Dense forest",
+        "to": "Urban",
+        "area_ha": 10823.7
+      },
+      "1->8": {
+        "from": "Dense forest",
+        "to": "Mangroves",
+        "area_ha": 25016.9
+      },
+      "2->1": {
+        "from": "Secondary forest",
+        "to": "Dense forest",
+        "area_ha": 121553.9
+      },
+      "2->2": {
+        "from": "Secondary forest",
+        "to": "Secondary forest",
+        "area_ha": 359746.1
+      },
+      "2->3": {
+        "from": "Secondary forest",
+        "to": "Pastures",
+        "area_ha": 151647.8
+      },
+      "2->5": {
+        "from": "Secondary forest",
+        "to": "Water",
+        "area_ha": 61.5
+      },
+      "2->6": {
+        "from": "Secondary forest",
+        "to": "Urban",
+        "area_ha": 28352.5
+      },
+      "2->8": {
+        "from": "Secondary forest",
+        "to": "Mangroves",
+        "area_ha": 921.3
+      },
+      "3->1": {
+        "from": "Pastures",
+        "to": "Dense forest",
+        "area_ha": 103221.5
+      },
+      "3->2": {
+        "from": "Pastures",
+        "to": "Secondary forest",
+        "area_ha": 63268.8
+      },
+      "3->3": {
+        "from": "Pastures",
+        "to": "Pastures",
+        "area_ha": 610321.5
+      },
+      "3->5": {
+        "from": "Pastures",
+        "to": "Water",
+        "area_ha": 380.8
+      },
+      "3->6": {
+        "from": "Pastures",
+        "to": "Urban",
+        "area_ha": 109653.4
+      },
+      "3->8": {
+        "from": "Pastures",
+        "to": "Mangroves",
+        "area_ha": 54554.2
+      },
+      "5->1": {
+        "from": "Water",
+        "to": "Dense forest",
+        "area_ha": 65.9
+      },
+      "5->2": {
+        "from": "Water",
+        "to": "Secondary forest",
+        "area_ha": 65.9
+      },
+      "5->3": {
+        "from": "Water",
+        "to": "Pastures",
+        "area_ha": 165.4
+      },
+      "5->5": {
+        "from": "Water",
+        "to": "Water",
+        "area_ha": 461536.6
+      },
+      "5->6": {
+        "from": "Water",
+        "to": "Urban",
+        "area_ha": 343.2
+      },
+      "5->8": {
+        "from": "Water",
+        "to": "Mangroves",
+        "area_ha": 980.3
+      },
+      "6->1": {
+        "from": "Urban",
+        "to": "Dense forest",
+        "area_ha": 3368.7
+      },
+      "6->2": {
+        "from": "Urban",
+        "to": "Secondary forest",
+        "area_ha": 43294.3
+      },
+      "6->3": {
+        "from": "Urban",
+        "to": "Pastures",
+        "area_ha": 121314.7
+      },
+      "6->5": {
+        "from": "Urban",
+        "to": "Water",
+        "area_ha": 531.2
+      },
+      "6->6": {
+        "from": "Urban",
+        "to": "Urban",
+        "area_ha": 195535.8
+      },
+      "6->8": {
+        "from": "Urban",
+        "to": "Mangroves",
+        "area_ha": 2754.0
+      },
+      "8->1": {
+        "from": "Mangroves",
+        "to": "Dense forest",
+        "area_ha": 323.9
+      },
+      "8->2": {
+        "from": "Mangroves",
+        "to": "Secondary forest",
+        "area_ha": 532.3
+      },
+      "8->3": {
+        "from": "Mangroves",
+        "to": "Pastures",
+        "area_ha": 24274.1
+      },
+      "8->5": {
+        "from": "Mangroves",
+        "to": "Water",
+        "area_ha": 1820.2
+      },
+      "8->6": {
+        "from": "Mangroves",
+        "to": "Urban",
+        "area_ha": 1352.3
+      },
+      "8->8": {
+        "from": "Mangroves",
+        "to": "Mangroves",
+        "area_ha": 57509.3
+      }
+    },
+    "change_rates": {
+      "1": {
+        "name": "Dense forest",
+        "area_t1_ha": 720066.6,
+        "area_t2_ha": 612897.7,
+        "net_change_ha": -107168.9,
+        "pct_change": -14.88,
+        "annual_rate_pct": -4.029
+      },
+      "2": {
+        "name": "Secondary forest",
+        "area_t1_ha": 662283.1,
+        "area_t2_ha": 591616.6,
+        "net_change_ha": -70666.5,
+        "pct_change": -10.67,
+        "annual_rate_pct": -2.821
+      },
+      "3": {
+        "name": "Pastures",
+        "area_t1_ha": 941400.2,
+        "area_t2_ha": 1082609.0,
+        "net_change_ha": 141208.8,
+        "pct_change": 15.0,
+        "annual_rate_pct": 3.494
+      },
+      "4": {
+        "name": "Crops",
+        "area_t1_ha": 0,
+        "area_t2_ha": 0,
+        "net_change_ha": 0,
+        "pct_change": 0,
+        "annual_rate_pct": 0
+      },
+      "5": {
+        "name": "Water",
+        "area_t1_ha": 463157.3,
+        "area_t2_ha": 464597.8,
+        "net_change_ha": 1440.5,
+        "pct_change": 0.31,
+        "annual_rate_pct": 0.078
+      },
+      "6": {
+        "name": "Urban",
+        "area_t1_ha": 366798.7,
+        "area_t2_ha": 346060.9,
+        "net_change_ha": -20737.8,
+        "pct_change": -5.65,
+        "annual_rate_pct": -1.455
+      },
+      "7": {
+        "name": "Bare soil",
+        "area_t1_ha": 0,
+        "area_t2_ha": 0,
+        "net_change_ha": 0,
+        "pct_change": 0,
+        "annual_rate_pct": 0
+      },
+      "8": {
+        "name": "Mangroves",
+        "area_t1_ha": 85812.1,
+        "area_t2_ha": 141736.0,
+        "net_change_ha": 55923.9,
+        "pct_change": 65.17,
+        "annual_rate_pct": 12.545
+      }
+    }
+  },
+  "T3_T4": {
+    "years": "2020-2024",
+    "years_between": 4,
+    "transitions": {
+      "1->1": {
+        "from": "Dense forest",
+        "to": "Dense forest",
+        "area_ha": 236401.9
+      },
+      "1->2": {
+        "from": "Dense forest",
+        "to": "Secondary forest",
+        "area_ha": 41184.2
+      },
+      "1->3": {
+        "from": "Dense forest",
+        "to": "Pastures",
+        "area_ha": 331960.4
+      },
+      "1->5": {
+        "from": "Dense forest",
+        "to": "Water",
+        "area_ha": 29.5
+      },
+      "1->6": {
+        "from": "Dense forest",
+        "to": "Urban",
+        "area_ha": 1445.6
+      },
+      "1->8": {
+        "from": "Dense forest",
+        "to": "Mangroves",
+        "area_ha": 1902.7
+      },
+      "2->1": {
+        "from": "Secondary forest",
+        "to": "Dense forest",
+        "area_ha": 118397.3
+      },
+      "2->2": {
+        "from": "Secondary forest",
+        "to": "Secondary forest",
+        "area_ha": 349261.7
+      },
+      "2->3": {
+        "from": "Secondary forest",
+        "to": "Pastures",
+        "area_ha": 89626.5
+      },
+      "2->5": {
+        "from": "Secondary forest",
+        "to": "Water",
+        "area_ha": 42.3
+      },
+      "2->6": {
+        "from": "Secondary forest",
+        "to": "Urban",
+        "area_ha": 27672.9
+      },
+      "2->8": {
+        "from": "Secondary forest",
+        "to": "Mangroves",
+        "area_ha": 6616.8
+      },
+      "3->1": {
+        "from": "Pastures",
+        "to": "Dense forest",
+        "area_ha": 89352.0
+      },
+      "3->2": {
+        "from": "Pastures",
+        "to": "Secondary forest",
+        "area_ha": 166704.0
+      },
+      "3->3": {
+        "from": "Pastures",
+        "to": "Pastures",
+        "area_ha": 710215.9
+      },
+      "3->5": {
+        "from": "Pastures",
+        "to": "Water",
+        "area_ha": 123.9
+      },
+      "3->6": {
+        "from": "Pastures",
+        "to": "Urban",
+        "area_ha": 91205.1
+      },
+      "3->8": {
+        "from": "Pastures",
+        "to": "Mangroves",
+        "area_ha": 28572.0
+      },
+      "5->1": {
+        "from": "Water",
+        "to": "Dense forest",
+        "area_ha": 70.8
+      },
+      "5->2": {
+        "from": "Water",
+        "to": "Secondary forest",
+        "area_ha": 55.1
+      },
+      "5->3": {
+        "from": "Water",
+        "to": "Pastures",
+        "area_ha": 557.9
+      },
+      "5->5": {
+        "from": "Water",
+        "to": "Water",
+        "area_ha": 462596.6
+      },
+      "5->6": {
+        "from": "Water",
+        "to": "Urban",
+        "area_ha": 115.0
+      },
+      "5->8": {
+        "from": "Water",
+        "to": "Mangroves",
+        "area_ha": 1202.5
+      },
+      "6->1": {
+        "from": "Urban",
+        "to": "Dense forest",
+        "area_ha": 4191.7
+      },
+      "6->2": {
+        "from": "Urban",
+        "to": "Secondary forest",
+        "area_ha": 99491.9
+      },
+      "6->3": {
+        "from": "Urban",
+        "to": "Pastures",
+        "area_ha": 107886.5
+      },
+      "6->5": {
+        "from": "Urban",
+        "to": "Water",
+        "area_ha": 448.3
+      },
+      "6->6": {
+        "from": "Urban",
+        "to": "Urban",
+        "area_ha": 131635.1
+      },
+      "6->8": {
+        "from": "Urban",
+        "to": "Mangroves",
+        "area_ha": 2842.7
+      },
+      "8->1": {
+        "from": "Mangroves",
+        "to": "Dense forest",
+        "area_ha": 1062.6
+      },
+      "8->2": {
+        "from": "Mangroves",
+        "to": "Secondary forest",
+        "area_ha": 417.1
+      },
+      "8->3": {
+        "from": "Mangroves",
+        "to": "Pastures",
+        "area_ha": 52396.4
+      },
+      "8->5": {
+        "from": "Mangroves",
+        "to": "Water",
+        "area_ha": 823.0
+      },
+      "8->6": {
+        "from": "Mangroves",
+        "to": "Urban",
+        "area_ha": 358.3
+      },
+      "8->8": {
+        "from": "Mangroves",
+        "to": "Mangroves",
+        "area_ha": 86678.7
+      }
+    },
+    "change_rates": {
+      "1": {
+        "name": "Dense forest",
+        "area_t1_ha": 612924.3,
+        "area_t2_ha": 449476.3,
+        "net_change_ha": -163448.0,
+        "pct_change": -26.67,
+        "annual_rate_pct": -7.754
+      },
+      "2": {
+        "name": "Secondary forest",
+        "area_t1_ha": 591617.5,
+        "area_t2_ha": 657114.0,
+        "net_change_ha": 65496.5,
+        "pct_change": 11.07,
+        "annual_rate_pct": 2.625
+      },
+      "3": {
+        "name": "Pastures",
+        "area_t1_ha": 1086172.9,
+        "area_t2_ha": 1292643.6,
+        "net_change_ha": 206470.7,
+        "pct_change": 19.01,
+        "annual_rate_pct": 4.351
+      },
+      "4": {
+        "name": "Crops",
+        "area_t1_ha": 0,
+        "area_t2_ha": 0,
+        "net_change_ha": 0,
+        "pct_change": 0,
+        "annual_rate_pct": 0
+      },
+      "5": {
+        "name": "Water",
+        "area_t1_ha": 464597.9,
+        "area_t2_ha": 464063.6,
+        "net_change_ha": -534.3,
+        "pct_change": -0.12,
+        "annual_rate_pct": -0.029
+      },
+      "6": {
+        "name": "Urban",
+        "area_t1_ha": 346496.2,
+        "area_t2_ha": 252432.0,
+        "net_change_ha": -94064.2,
+        "pct_change": -27.15,
+        "annual_rate_pct": -7.918
+      },
+      "7": {
+        "name": "Bare soil",
+        "area_t1_ha": 0,
+        "area_t2_ha": 0,
+        "net_change_ha": 0,
+        "pct_change": 0,
+        "annual_rate_pct": 0
+      },
+      "8": {
+        "name": "Mangroves",
+        "area_t1_ha": 141736.1,
+        "area_t2_ha": 127815.4,
+        "net_change_ha": -13920.7,
+        "pct_change": -9.82,
+        "annual_rate_pct": -2.584
+      }
+    }
+  },
+  "hansen_gfc": {
+    "pre_acuerdo": {
+      "label": "T1: Pre-Agreement (active conflict)",
+      "loss_ha": 26278.8
+    },
+    "transicion": {
+      "label": "T2: Transition (post-ceasefire)",
+      "loss_ha": 37433.7
+    },
+    "post_acuerdo_1": {
+      "label": "T3: Early post-agreement",
+      "loss_ha": 29211.3
+    },
+    "post_acuerdo_2": {
+      "label": "T4: Recent post-agreement",
+      "loss_ha": 18008.0
+    }
+  },
+  "hansen_treecover2000": {
+    "treecover2000": 57.28119731595827
+  }
+}

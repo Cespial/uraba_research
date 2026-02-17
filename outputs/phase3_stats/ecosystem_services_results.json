@@ -1,0 +1,43 @@
+{
+  "pre_acuerdo": {
+    "year": 2013,
+    "carbon_Mg_C": 354472870.0,
+    "water_yield_mm": 2041.9,
+    "baseflow_mm": 490.5,
+    "habitat_quality_mean": 0.1949,
+    "habitat_quality_std": 0.1168
+  },
+  "transicion": {
+    "year": 2016,
+    "carbon_Mg_C": 368514506.0,
+    "water_yield_mm": 1936.6,
+    "baseflow_mm": 585.8,
+    "habitat_quality_mean": 0.2119,
+    "habitat_quality_std": 0.1301
+  },
+  "post_acuerdo_1": {
+    "year": 2020,
+    "carbon_Mg_C": 347795102.0,
+    "water_yield_mm": 1904.7,
+    "baseflow_mm": 517.7,
+    "habitat_quality_mean": 0.2004,
+    "habitat_quality_std": 0.1197
+  },
+  "post_acuerdo_2": {
+    "year": 2024,
+    "carbon_Mg_C": 315090476.0,
+    "water_yield_mm": 2193.9,
+    "baseflow_mm": 744.9,
+    "habitat_quality_mean": 0.2472,
+    "habitat_quality_std": 0.0924
+  },
+  "carbon_change_2013_2016": {
+    "net_Mg_C": 14041636.0
+  },
+  "carbon_change_2016_2020": {
+    "net_Mg_C": -20719404.0
+  },
+  "carbon_change_2020_2024": {
+    "net_Mg_C": -32704626.0
+  }
+}

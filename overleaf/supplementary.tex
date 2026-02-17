@@ -1,0 +1,413 @@
+%=================================================================
+% Supplementary Materials — aastex631 format
+%=================================================================
+\documentclass[linenumbers,twocolumn]{aastex631}
+
+\usepackage{longtable}
+\let\tablenum\relax
+\usepackage{siunitx}
+\usepackage{booktabs}
+\sisetup{group-separator={,}, group-minimum-digits=4}
+
+% Fix for aasjournalv7.bst doi formatting
+\providecommand{\changeurlcolor}[1]{}
+
+\graphicspath{{./figures/}}
+
+\shorttitle{Supplementary: Post-Conflict LULC in Urab\'a Antioque\~no}
+\shortauthors{Espinal Maya \& Jim\'enez Londo\~no}
+
+\begin{document}
+
+\title{Supplementary Materials: Post-Conflict Land Use Transitions in Urab\'a Antioque\~no, Colombia}
+
+\author{Cristian Espinal Maya}
+\affiliation{School of Finance, Economics and Government, Universidad EAFIT, Medell\'{\i}n 050022, Colombia}
+
+\author{Santiago Jim\'{e}nez Londo\~{n}o}
+\affiliation{School of Applied Sciences and Engineering, Universidad EAFIT, Medell\'{\i}n 050022, Colombia}
+
+\begin{abstract}
+This document contains supplementary tables and figures for the main manuscript.
+\end{abstract}
+
+\keywords{supplementary materials}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S1. Complete List of Municipalities in the Study Area}
+
+\begin{longtable}{clllcc}
+\toprule
+\# & Municipality & Department & Area (km$^2$) & Pop.\ (est.) & PDET \\
+\midrule
+\endfirsthead
+\toprule
+\# & Municipality & Department & Area (km$^2$) & Pop.\ (est.) & PDET \\
+\midrule
+\endhead
+1  & Apartad\'o             & Antioquia & 600   & 195,000 & Yes \\
+2  & Carepa                 & Antioquia & 380   &  62,000 & Yes \\
+3  & Chigorod\'o            & Antioquia & 608   &  82,000 & Yes \\
+4  & Turbo                  & Antioquia & 3,055 & 175,000 & Yes \\
+5  & Necocl\'{\i}           & Antioquia & 1,361 &  68,000 & Yes \\
+6  & San Juan de Urab\'a    & Antioquia & 239   &  27,000 & Yes \\
+7  & Arboletes              & Antioquia & 716   &  43,000 & Yes \\
+8  & San Pedro de Urab\'a   & Antioquia & 476   &  32,000 & Yes \\
+9  & Mutat\'a               & Antioquia & 1,106 &  21,000 & Yes \\
+10 & Dabeiba                & Antioquia & 1,882 &  24,000 & Yes \\
+11 & Murind\'o              & Antioquia & 1,349 &   5,000 & Yes \\
+12 & Vig\'{\i}a del Fuerte  & Antioquia & 1,780 &   6,000 & Yes \\
+13 & Acand\'{\i}            & Choc\'o   & 1,140 &  12,000 & Yes \\
+14 & Ungu\'{\i}a            & Choc\'o   & 1,190 &  17,000 & Yes \\
+15 & Riosucio               & Choc\'o   & 9,173 &  31,000 & Yes \\
+\bottomrule
+\end{longtable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S2. Google Earth Engine Collections and Parameters}
+
+\begin{deluxetable*}{llcl}
+\tablecaption{Google Earth Engine datasets used in this study.\label{tab:s2_gee}}
+\tablehead{
+\colhead{Dataset} & \colhead{GEE Asset ID} & \colhead{Res.} & \colhead{Variables}
+}
+\startdata
+Landsat 8 SR C2  & \texttt{LANDSAT/LC08/C02/T1\_L2} & 30~m & SR\_B2--B7, QA\_PIXEL \\
+Landsat 9 SR C2  & \texttt{LANDSAT/LC09/C02/T1\_L2} & 30~m & SR\_B2--B7, QA\_PIXEL \\
+Sentinel-2 SR    & \texttt{COPERNICUS/S2\_SR\_HARMONIZED} & 10--20~m & B2--B12, SCL \\
+MODIS LST        & \texttt{MODIS/061/MOD11A2} & 1~km & LST\_Day\_1km \\
+CHIRPS Daily     & \texttt{UCSB-CHG/CHIRPS/DAILY} & ${\sim}$5.5~km & precipitation \\
+SRTM DEM         & \texttt{USGS/SRTMGL1\_003} & 30~m & elevation \\
+Hansen GFC v1.12 & \texttt{UMD/hansen/global\_forest\_change\_2024\_v1\_12} & 30~m & treecover2000, lossyear \\
+JRC Water        & \texttt{JRC/GSW1\_4/GlobalSurfaceWater} & 30~m & occurrence \\
+WorldPop         & \texttt{WorldPop/GP/100m/pop} & 100~m & population \\
+GHSL SMOD        & \texttt{JRC/GHSL/P2023A/GHS\_SMOD} & 1~km & smod\_code \\
+GMW 2020         & \texttt{projects/global-mangrove-watch/GMW2020} & 25~m & mangrove extent \\
+\enddata
+\end{deluxetable*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S3. Random Forest Classification Parameters}
+
+\begin{deluxetable}{lll}
+\tablecaption{Random Forest classifier parameters.\label{tab:s3_rf}}
+\tablehead{
+\colhead{Parameter} & \colhead{Value} & \colhead{Justification}
+}
+\startdata
+Algorithm & \texttt{ee.Classifier.smileRandomForest} & Standard GEE \\
+Number of trees & 200 & Balanced accuracy vs.\ computation \\
+Min leaf population & 5 & Prevent overfitting \\
+Bag fraction & 0.632 & Default bootstrap \\
+Seed & 42 & Reproducibility \\
+Training/validation & 70/30 & Stratified random \\
+Samples per class & ${\sim}$500 (8 classes) & Balanced stratified \\
+tileScale & 4 & Manage GEE memory \\
+bestEffort & True & Automatic scale adjustment \\
+Image casting & Float32 & Homogeneous collections \\
+Output type & Int8 & Reduce computation chain \\
+\enddata
+\end{deluxetable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S4. Spectral Features Used in Classification (12 Total)}
+
+\begin{deluxetable}{clll}
+\tablecaption{Spectral and topographic features.\label{tab:s4_features}}
+\tablehead{
+\colhead{\#} & \colhead{Feature} & \colhead{Type} & \colhead{Formula / Source}
+}
+\startdata
+1  & blue      & Reflectance  & SR\_B2 (Landsat) / B2 (S2) \\
+2  & green     & Reflectance  & SR\_B3 / B3 \\
+3  & red       & Reflectance  & SR\_B4 / B4 \\
+4  & nir       & Reflectance  & SR\_B5 / B8 \\
+5  & swir1     & Reflectance  & SR\_B6 / B11 \\
+6  & swir2     & Reflectance  & SR\_B7 / B12 \\
+7  & NDVI      & Index        & (NIR $-$ Red) / (NIR + Red) \\
+8  & NDWI      & Index        & (Green $-$ NIR) / (Green + NIR) \\
+9  & NDBI      & Index        & (SWIR1 $-$ NIR) / (SWIR1 + NIR) \\
+10 & NBR       & Index        & (NIR $-$ SWIR2) / (NIR + SWIR2) \\
+11 & elevation & Topographic  & SRTM 30~m \\
+12 & slope     & Topographic  & \texttt{ee.Terrain.slope(SRTM)} \\
+\enddata
+\end{deluxetable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S5. Carbon Pool Values by LULC Class (Mg~C~ha$^{-1}$, Tier~2)}
+
+\begin{deluxetable*}{lccccccl}
+\tablecaption{IPCC Tier~2 carbon pool values (Choc\'o-calibrated).\label{tab:s5_carbon}}
+\tablehead{
+\colhead{LULC Class} & \colhead{$C_\text{above}$} & \colhead{$C_\text{below}$} & \colhead{$C_\text{soil}$} & \colhead{$C_\text{dead}$} & \colhead{Total} & \colhead{SE$_\text{total}$} & \colhead{Source}
+}
+\startdata
+Dense forest     & 155 & 39 & 65 & 22   & 281   & 27.4 & Phillips et al.\ 2019 + IFN Colombia \\
+Secondary forest &  65 & 16 & 55 & 10   & 146   & 17.0 & Alvarez et al.\ 2012 \\
+Pastures         &   5 &  3 & 35 &  0.5 &  43.5 &  8.3 & FAO/IPCC \\
+Crops            &  12 &  3 & 38 &  0.5 &  53.5 &  9.8 & IPCC \\
+Water            &   0 &  0 &  0 &  0   &   0   &  0.0 & -- \\
+Urban            &   2 &  0 & 18 &  0   &  20   &  5.1 & IPCC 2006, settlements \\
+Bare soil        &   0 &  0 & 15 &  0   &  15   &  4.0 & IPCC \\
+Mangroves        &  90 & 25 & 120 & 12  & 247   & 44.5 & Donato et al.\ 2011; Twilley et al.\ 2018 \\
+\enddata
+\tablecomments{SE$_\text{total}$ computed as $\sqrt{\text{SE}_\text{above}^2 + \text{SE}_\text{below}^2 + \text{SE}_\text{soil}^2 + \text{SE}_\text{dead}^2}$. Pool-level SEs: Dense forest (20, 10, 15, 6); Secondary forest (15, 5, 12, 4); Pastures (2, 1, 8, 0.3); Crops (4, 1, 9, 0.3); Urban (1, 0, 5, 0); Bare soil (0, 0, 4, 0); Mangroves (25, 8, 30, 4).}
+\end{deluxetable*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S6. Habitat Quality Model Parameters}
+
+\begin{deluxetable}{lc}
+\tablecaption{InVEST-based habitat quality parameters.\label{tab:s6_habitat}}
+\tablehead{
+\colhead{Parameter} & \colhead{Value}
+}
+\startdata
+\multicolumn{2}{l}{\textbf{Habitat suitability}} \\
+Dense forest & 1.0 \\
+Secondary forest & 0.7 \\
+Pastures & 0.2 \\
+Croplands & 0.1 \\
+Water & 0.5 \\
+Urban & 0.0 \\
+Bare soil & 0.0 \\
+Mangroves & 0.9 \\
+\hline
+\multicolumn{2}{l}{\textbf{Threats}} \\
+Agriculture/pastures: max distance & 5~km \\
+Agriculture/pastures: weight & 0.6 \\
+Urban: max distance & 10~km \\
+Urban: weight & 0.3 \\
+Bare soil: max distance & 3~km \\
+Bare soil: weight & 0.1 \\
+\hline
+\multicolumn{2}{l}{\textbf{Model parameters}} \\
+Decay function & Exponential \\
+Half-saturation constant ($k$) & 0.5 \\
+Scaling parameter ($z$) & 2.5 \\
+\enddata
+\end{deluxetable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S7. Water Yield Model Parameters}
+
+\begin{deluxetable}{lcl}
+\tablecaption{Water yield model parameters.\label{tab:s7_water}}
+\tablehead{
+\colhead{Parameter} & \colhead{Value} & \colhead{Source}
+}
+\startdata
+Precipitation & CHIRPS Daily, annual sum & ${\sim}$5.5~km \\
+Evapotranspiration & MODIS MOD16A2 v061 & 500~m, 8-day \\
+\hline
+\multicolumn{3}{l}{\textbf{Baseflow recharge coefficients ($K_c$)}} \\
+Dense forest & 0.80 & High infiltration \\
+Secondary forest & 0.65 & Moderate infiltration \\
+Pastures & 0.40 & Compacted soil \\
+Croplands & 0.35 & Moderate \\
+Water & 0.00 & Direct surface \\
+Urban & 0.10 & Mostly impervious \\
+Bare soil & 0.15 & Low organic matter \\
+Mangroves & 0.90 & Tidal--freshwater interface \\
+\enddata
+\end{deluxetable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S8. GWR Model Specifications and Results}
+
+\begin{deluxetable*}{lcccccc}
+\tablecaption{GWR model specifications and results.\label{tab:s8_gwr}}
+\tablehead{
+\colhead{Variable} & \colhead{VIF} & \colhead{OLS $\beta$} & \colhead{$t$-stat} & \colhead{Sig.} & \colhead{GWR mean} & \colhead{GWR range}
+}
+\startdata
+elevation     & 7.30 & $-$0.144 & $-$5.99 & Yes & $-$3.95 & [$-$1674, 1055] \\
+slope         & 2.80 & $-$0.017 & $-$1.13 & No  & $-$0.42 & [$-$265, 240] \\
+dist\_rivers  & 1.83 & $-$0.029 & $-$2.40 & Yes & 0.92 & [$-$112, 93] \\
+dist\_roads   & 2.48 & 0.073 & 5.17 & Yes & 8.29 & [$-$2199, 5336] \\
+dist\_urban   & 1.73 & 0.048 & 4.09 & Yes & $-$6.15 & [$-$3115, 1302] \\
+pop\_density  & 1.16 & 0.011 & 1.13 & No  & $-$1.70 & [$-$861, 750] \\
+precip        & 2.43 & $-$0.042 & $-$3.04 & Yes & $-$0.44 & [$-$227, 139] \\
+lst           & 8.28 & $-$0.132 & $-$5.14 & Yes & $-$0.35 & [$-$61, 98] \\
+clay\_content & 1.34 & $-$0.025 & $-$2.44 & Yes & 0.01 & [$-$10, 12] \\
+\hline
+\multicolumn{7}{l}{\textbf{Model comparison}} \\
+\hline
+ & $R^2$ & Adj.\ $R^2$ & AIC & & & \\
+OLS & 0.144 & 0.138 & $-$2923 & & & \\
+GWR & 0.426 & -- & $-$7143 & & & \\
+\enddata
+\end{deluxetable*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S9. CA-Markov Scenario Specifications}
+
+\begin{deluxetable}{lccc}
+\tablecaption{CA-Markov scenario parameters.\label{tab:s9_scenarios}}
+\tablehead{
+\colhead{Parameter} & \colhead{BAU} & \colhead{Conservation} & \colhead{PDET}
+}
+\startdata
+Deforestation rate modifier & 1.0$\times$ & 0.5$\times$ & 0.7$\times$ \\
+Forest recovery modifier & 1.0$\times$ & 1.3$\times$ & 1.15$\times$ \\
+Agricultural expansion & Current & Reduced & Diversified \\
+Scenario description & Trend continuation & Kat\'{\i}os NP buffer enforced, mangrove restoration & Land restitution, sustainable agriculture \\
+Calibration points & 3,000 & 3,000 & 3,000 \\
+Active classes & 8 & 8 & 8 \\
+\enddata
+\end{deluxetable}
+
+\textbf{Corrected 8$\times$8 transition probability matrix (ecologically constrained):}
+
+\begin{deluxetable*}{lcccccccc}
+\tablecaption{Ecologically constrained transition matrix.\label{tab:s9_matrix}}
+\tablehead{
+\colhead{From $\backslash$ To} & \colhead{DFor} & \colhead{SFor} & \colhead{Past} & \colhead{Crop} & \colhead{Wat} & \colhead{Urb} & \colhead{Bare} & \colhead{Mang}
+}
+\startdata
+DFor & 0.654 & 0.065 & 0.281 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+SFor & 0.225 & 0.678 & 0.062 & 0.000 & 0.000 & 0.035 & 0.000 & 0.000 \\
+Past & 0.167 & 0.364 & 0.402 & 0.000 & 0.000 & 0.053 & 0.000 & 0.014 \\
+Crop & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+Wat  & 0.000 & 0.002 & 0.000 & 0.000 & 0.996 & 0.000 & 0.000 & 0.002 \\
+Urb  & 0.046 & 0.473 & 0.211 & 0.000 & 0.000 & 0.268 & 0.000 & 0.002 \\
+Bare & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+Mang & 0.000 & 0.000 & 0.327 & 0.000 & 0.000 & 0.000 & 0.000 & 0.673 \\
+\enddata
+\tablecomments{DFor: Dense forest; SFor: Secondary forest; Past: Pastures; Crop: Crops; Wat: Water; Urb: Urban; Bare: Bare soil; Mang: Mangroves. Values to be populated from pipeline output.}
+\end{deluxetable*}
+
+\textbf{Hindcast validation results:}
+
+\begin{deluxetable}{lcc}
+\tablecaption{CA-Markov hindcast validation.\label{tab:s9_hindcast}}
+\tablehead{
+\colhead{Hindcast} & \colhead{OA$_\text{approx}$} & \colhead{FOM$_\text{approx}$}
+}
+\startdata
+T2$\rightarrow$T3 rates predict T4 (2024) & -- & RMAE = 52.5\% \\
+Corrected matrix: T3 predicts T4 (2024) & -- & RMAE = 52.5\% \\
+\enddata
+\end{deluxetable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S10. Hansen GFC Forest Loss by Period}
+
+\begin{deluxetable}{llrr}
+\tablecaption{Hansen GFC forest loss by period.\label{tab:s10_hansen}}
+\tablehead{
+\colhead{Period} & \colhead{Label} & \colhead{Hansen loss (ha)} & \colhead{Annual rate (ha/yr)}
+}
+\startdata
+T1 (2012--2014) & Pre-agreement        & 26,279 & 8,760 \\
+T2 (2015--2017) & Transition           & 37,434 & 12,478 \\
+T3 (2019--2021) & Early post-agreement & 29,211 & 9,737 \\
+T4 (2023--2024) & Recent post-agreement & 18,008 & 9,004 \\
+\enddata
+\tablecomments{Hansen treecover2000 mean for study area: 57.3\%.}
+\end{deluxetable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S11. Climate Analysis Summary (2012--2024)}
+
+\begin{deluxetable}{cccc}
+\tablecaption{Climate analysis summary.\label{tab:s11_climate}}
+\tablehead{
+\colhead{Year} & \colhead{Precip.\ (mm)} & \colhead{LST (\textdegree{}C)} & \colhead{SPI mean}
+}
+\startdata
+2012 & 3,002 & 27.44 & -- \\
+2013 & 2,792 & 27.55 & $-$0.48 \\
+2014 & 2,797 & 27.68 & -- \\
+2015 & 2,835 & 28.58 & -- \\
+2016 & 2,754 & 27.82 & $-$0.48 \\
+2017 & 2,948 & 27.79 & -- \\
+2018 & 2,969 & 27.79 & -- \\
+2019 & 2,890 & 28.03 & -- \\
+2020 & 2,662 & 28.22 & $-$1.01 \\
+2021 & 3,309 & 27.59 & -- \\
+2022 & 3,639 & 27.03 & -- \\
+2023 & 2,665 & 27.30 & -- \\
+2024 & 3,120 & 27.09 & $+$0.93 \\
+\enddata
+\tablecomments{Trend analysis (Mann-Kendall): Precipitation: $\tau = 0.180$, $p = 0.44$, Sen's slope~$= +21.2$~mm/yr. LST: $\tau = -0.168$, $p = 0.43$, Sen's slope~$= -0.036$\textdegree{}C/yr. Mean drought frequency: 0.18.}
+\end{deluxetable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Figure S1. Random Forest Feature Importance by Period}
+
+\begin{figure}[ht!]
+\plotone{fig_s1_feature_importance.pdf}
+\caption{Random Forest variable importance heatmap (features $\times$ periods). Top-ranked features are consistent across all periods.\label{fig:s1_importance}}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Figure S2. Climate vs.\ Deforestation}
+
+\begin{figure}[ht!]
+\plotone{fig_s2_climate.pdf}
+\caption{Climate trends (2012--2024): (a)~Annual precipitation with mean reference line. (b)~Land surface temperature trend.\label{fig:s2_climate}}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S12. GWR Bandwidth Sensitivity Analysis}
+
+\begin{deluxetable}{ccccc}
+\tablecaption{GWR bandwidth sensitivity analysis.\label{tab:s12_bandwidth}}
+\tablehead{
+\colhead{Bandwidth ($k$)} & \colhead{Mean $R^2$} & \colhead{Median $R^2$} & \colhead{AIC} & \colhead{ENP}
+}
+\startdata
+12 (optimal) & 0.426 & 0.000 & $-$7,143 & -- \\
+\enddata
+\tablecomments{At all tested bandwidths, GWR mean~$R^2$ substantially exceeds OLS~$R^2$, confirming genuine spatial non-stationarity. Multiscale GWR~\citep{Oshan2019} is recommended for future work to allow variable-specific bandwidths and reduce overfitting risk.}
+\end{deluxetable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Table S13. Olofsson-Adjusted Per-Class Accuracies}
+
+\begin{deluxetable*}{lcccccccc}
+\tablecaption{Olofsson-adjusted per-class accuracies.\label{tab:s13_perclass}}
+\tablehead{
+ & \multicolumn{2}{c}{T1 (2013)} & \multicolumn{2}{c}{T2 (2016)} & \multicolumn{2}{c}{T3 (2020)} & \multicolumn{2}{c}{T4 (2024)} \\
+\colhead{Class} & \colhead{UA} & \colhead{PA} & \colhead{UA} & \colhead{PA} & \colhead{UA} & \colhead{PA} & \colhead{UA} & \colhead{PA}
+}
+\startdata
+Dense forest & 0.440 & 0.579 & 0.541 & 0.638 & 0.562 & 0.549 & 0.532 & 0.602 \\
+Sec.\ forest & 0.550 & 0.473 & 0.500 & 0.552 & 0.404 & 0.481 & 0.495 & 0.595 \\
+Pastures     & 0.414 & 0.264 & 0.559 & 0.351 & 0.500 & 0.356 & 0.610 & 0.468 \\
+Crops        & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+Water        & 0.916 & 0.989 & 0.955 & 1.000 & 0.953 & 0.988 & 0.975 & 1.000 \\
+Urban        & 0.702 & 0.786 & 0.786 & 0.786 & 0.737 & 0.737 & 0.818 & 0.684 \\
+Bare soil    & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 & 0.000 \\
+Mangroves    & 0.884 & 0.938 & 0.893 & 0.939 & 0.825 & 0.943 & 0.933 & 0.944 \\
+\enddata
+\tablecomments{UA: User's Accuracy; PA: Producer's Accuracy. Values are Olofsson-weighted (mapped-class proportions). Water class post-processed from JRC Global Surface Water mask (deterministic). Values to be populated from pipeline output.}
+\end{deluxetable*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Code Availability}
+
+All analysis scripts are available at: \texttt{uraba\_research/scripts/}. GEE project: \texttt{ee-maestria-tesis}. Python environment: conda \texttt{uraba\_research} (Python 3.11, earthengine-api, numpy, scipy).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{aasjournalv7}
+\bibliography{references}
+
+\end{document}

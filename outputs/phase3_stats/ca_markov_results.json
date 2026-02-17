@@ -1,0 +1,336 @@
+{
+  "transition_matrix": [
+    [
+      0.6537785588752196,
+      0.06502636203866433,
+      0.281195079086116,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.2248062015503876,
+      0.6782945736434108,
+      0.06201550387596899,
+      0.0,
+      0.0,
+      0.03488372093023256,
+      0.0,
+      0.0
+    ],
+    [
+      0.16742493175614195,
+      0.36396724294813465,
+      0.4021838034576888,
+      0.0,
+      0.0,
+      0.052775250227479524,
+      0.0,
+      0.01364877161055505
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0020920502092050207,
+      0.0,
+      0.0,
+      0.99581589958159,
+      0.0,
+      0.0,
+      0.0020920502092050207
+    ],
+    [
+      0.04621072088724584,
+      0.4731977818853974,
+      0.21072088724584104,
+      0.0,
+      0.0,
+      0.2680221811460259,
+      0.0,
+      0.0018484288354898336
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.32727272727272727,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.6727272727272727
+    ]
+  ],
+  "areas_2024": {
+    "BDen": 639,
+    "BSec": 869,
+    "Past": 750,
+    "Cult": 0,
+    "Agua": 476,
+    "Urb": 212,
+    "Suel": 0,
+    "Mang": 54
+  },
+  "BAU_2030": {
+    "BDen": {
+      "pct": 24.95,
+      "change_pct": 17.13
+    },
+    "BSec": {
+      "pct": 33.51,
+      "change_pct": 15.68
+    },
+    "Past": {
+      "pct": 19.92,
+      "change_pct": -20.33
+    },
+    "Cult": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Agua": {
+      "pct": 15.8,
+      "change_pct": -0.42
+    },
+    "Urb": {
+      "pct": 4.22,
+      "change_pct": -40.23
+    },
+    "Suel": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Mang": {
+      "pct": 1.6,
+      "change_pct": -11.2
+    }
+  },
+  "BAU_2040": {
+    "BDen": {
+      "pct": 29.4,
+      "change_pct": 38.03
+    },
+    "BSec": {
+      "pct": 32.39,
+      "change_pct": 11.81
+    },
+    "Past": {
+      "pct": 18.56,
+      "change_pct": -25.77
+    },
+    "Cult": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Agua": {
+      "pct": 15.6,
+      "change_pct": -1.66
+    },
+    "Urb": {
+      "pct": 2.94,
+      "change_pct": -58.43
+    },
+    "Suel": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Mang": {
+      "pct": 1.11,
+      "change_pct": -38.11
+    }
+  },
+  "Conservation_2030": {
+    "BDen": {
+      "pct": 27.15,
+      "change_pct": 27.45
+    },
+    "BSec": {
+      "pct": 36.3,
+      "change_pct": 25.32
+    },
+    "Past": {
+      "pct": 15.57,
+      "change_pct": -37.71
+    },
+    "Cult": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Agua": {
+      "pct": 15.8,
+      "change_pct": -0.42
+    },
+    "Urb": {
+      "pct": 3.61,
+      "change_pct": -48.85
+    },
+    "Suel": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Mang": {
+      "pct": 1.56,
+      "change_pct": -13.07
+    }
+  },
+  "Conservation_2040": {
+    "BDen": {
+      "pct": 36.52,
+      "change_pct": 71.45
+    },
+    "BSec": {
+      "pct": 33.42,
+      "change_pct": 15.37
+    },
+    "Past": {
+      "pct": 11.86,
+      "change_pct": -52.57
+    },
+    "Cult": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Agua": {
+      "pct": 15.6,
+      "change_pct": -1.66
+    },
+    "Urb": {
+      "pct": 1.71,
+      "change_pct": -75.8
+    },
+    "Suel": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Mang": {
+      "pct": 0.89,
+      "change_pct": -50.44
+    }
+  },
+  "PDET_2030": {
+    "BDen": {
+      "pct": 26.43,
+      "change_pct": 24.07
+    },
+    "BSec": {
+      "pct": 34.23,
+      "change_pct": 18.15
+    },
+    "Past": {
+      "pct": 18.01,
+      "change_pct": -27.97
+    },
+    "Cult": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Agua": {
+      "pct": 15.8,
+      "change_pct": -0.42
+    },
+    "Urb": {
+      "pct": 3.94,
+      "change_pct": -44.22
+    },
+    "Suel": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Mang": {
+      "pct": 1.6,
+      "change_pct": -11.2
+    }
+  },
+  "PDET_2040": {
+    "BDen": {
+      "pct": 33.31,
+      "change_pct": 56.38
+    },
+    "BSec": {
+      "pct": 32.27,
+      "change_pct": 11.4
+    },
+    "Past": {
+      "pct": 15.48,
+      "change_pct": -38.09
+    },
+    "Cult": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Agua": {
+      "pct": 15.6,
+      "change_pct": -1.66
+    },
+    "Urb": {
+      "pct": 2.31,
+      "change_pct": -67.35
+    },
+    "Suel": {
+      "pct": 0.0,
+      "change_pct": 0.0
+    },
+    "Mang": {
+      "pct": 1.03,
+      "change_pct": -42.54
+    }
+  },
+  "validation": {
+    "method": "Hindcast 2016->2020 matrix, predict 2024",
+    "relative_MAE_pct": 52.5,
+    "by_class": {
+      "BDen": {
+        "observed": 639,
+        "simulated": 570.0
+      },
+      "BSec": {
+        "observed": 869,
+        "simulated": 165.0
+      },
+      "Past": {
+        "observed": 750,
+        "simulated": 1256.0
+      },
+      "Cult": {
+        "observed": 0,
+        "simulated": 0.0
+      },
+      "Agua": {
+        "observed": 476,
+        "simulated": 480.0
+      },
+      "Urb": {
+        "observed": 212,
+        "simulated": 490.0
+      },
+      "Suel": {
+        "observed": 0,
+        "simulated": 0.0
+      },
+      "Mang": {
+        "observed": 54,
+        "simulated": 39.0
+      }
+    }
+  }
+}

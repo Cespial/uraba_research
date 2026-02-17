@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.DS_Store
+logs/
+*.zip
+*.pdf
+*.tif
+*.gpkg
+*.npy
+data/manual/

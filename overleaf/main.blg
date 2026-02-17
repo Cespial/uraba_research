@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[52] biber-darwin:340> INFO - === Mon Feb 16, 2026, 12:32:01
+[65] Biber.pm:418> INFO - Reading 'main.bcf'
+[145] Biber.pm:972> INFO - Found 62 citekeys in bib section 0
+[155] Biber.pm:4383> INFO - Processing section 0
+[162] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[181] bibtex.pm:1713> INFO - LaTeX decoding ...
+[578] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[909] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[909] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[910] Biber.pm:4203> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[910] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[973] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[999] bbl.pm:757> INFO - Output to main.bbl
+[999] Biber.pm:130> WARN - Duplicate entry key: 'IDEAM2018' in file 'references.bib', skipping ...
+[999] Biber.pm:132> INFO - WARNINGS: 1
